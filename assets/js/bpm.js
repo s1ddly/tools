@@ -1,19 +1,21 @@
 document.onkeypress = function (e) {
     e = e || window.event;
-    //alert("key Pressed")
 	render_bpm(calc_bpm());
 };
 
 var last_click = null;
+var hist = [];
 
 function calc_bpm(){
 	curdate = new Date()
 	if(last_click == null ){
 		last_click = curdate.getTime();
+		hist.push(last_click)
 		return "One more!";
 	} else {
 		curr_time = curdate.getTime() - last_click;
 		last_click = curdate.getTime();
+		hist.push(last_click)
 		return Math.round(60000/curr_time);
 	}
 }
