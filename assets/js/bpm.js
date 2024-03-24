@@ -23,5 +23,9 @@ function calc_bpm(){
 function render_bpm(num){
 	document.getElementById("bpm-here").innerText=num;
 	document.getElementById("history-display").innerText=hist.join("\n");
+	document.getElementById("rolling-3").innerText=Math.round((hist.slice(Math.max(hist.length - 3, 1)).reduce((partialSum, a) => partialSum + a, 0))/3);
+	document.getElementById("rolling-5").innerText=Math.round((hist.slice(Math.max(hist.length - 5, 1)).reduce((partialSum, a) => partialSum + a, 0))/5);
+	document.getElementById("rolling-7").innerText=Math.round((hist.slice(Math.max(hist.length - 7, 1)).reduce((partialSum, a) => partialSum + a, 0))/7);
+	document.getElementById("average").innerText=Math.round((hist.reduce((partialSum, a) => partialSum + a, 0))/hist.length);
 	return null;
 }
