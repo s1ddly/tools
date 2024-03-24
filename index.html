@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="Sid Shardanand" />
-        <title>Brainfuck</title>
+        <title>BPM Tool</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -17,7 +17,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Brainfuck</a>
+                <a class="navbar-brand" href="#!">Tools</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -31,71 +31,13 @@
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6 h-100">
-						<p class="lead">Code:</p>
-						<textarea style='height: 200px;width: 100%' id="bfcode"> </textarea>
-						<p class="lead">Input:</p>
-						<textarea style='height: 100px;width: 100%' id="bfinput"> </textarea>
+						<h1 class="display-5 fw-bolder">Your BPM is:</h1>
+						<h1 class="display-5 fst-italic" id="bpm-here"></h1>
 					</div>
                     <div class="col-md-6">
-                        <h1 class="display-5 fw-bolder">Brainfuck Code</h1>
-						<ul>
-							<li><p>Please enter your brainfuck code and input on the left.</p></li>
-							<li><p>For input, each line represents a new input, so 3 inputs may look like 1\n2\n3. Input needs to be a number between 0 and 255</p></li>
-							<li><p>Finally, select whether output is represented in ascii or numbers.</p></li>
-							
-						</ul>
-                        <div class="d-flex">
-							<select class="form-control" id="bfselect" style="width: 50%;">
-								<option>ASCII</option>
-								<option>Number</option>
-							</select>
-                            <button class="btn btn-outline-dark flex-shrink-0" type="button" onclick="runbf();">
-                                Run!
-                            </button>
-                        </div>
-						<p><br>Output:</p>
-						<p id="bfoutput"></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Related items section-->
-        <section class="py-5 bg-light">
-            <div class="container px-4 px-lg-5 mt-5">
-                <h2 class="fw-bolder mb-4">Examples</h2>
-				<p class="lead">Each button pre-populates the code, but does not execute it</p>
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Hello World</h5>
-									<p>Prints "Hello world" by sequentially incrementing values until the ascii values equal the character codes.</p>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="loadcode('helloworld');">run</a></div>
-                            </div>
-                        </div>
-                    </div>
-					<div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Add Two Numbers</h5>
-									<p>Put the 2 numbers to add on separate lines in the input. Only supports numbers with a sum less than 255.</p>
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" onclick="loadcode('add');">run</a></div>
-                            </div>
-                        </div>
+                        <h1 class="display-5 fw-bolder">BPM Tool</h1>
+						<p>Start tapping a key and the tool will tell you what BPM you are tapping at</p>
+						<p>This is useful to tap along with a song to figure out its BPM</p>
                     </div>
                 </div>
             </div>
@@ -110,8 +52,7 @@
 			</footer>
 		</div>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
     </body>
 </html>

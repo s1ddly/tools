@@ -10,7 +10,7 @@ function calc_bpm(){
 	curdate = new Date()
 	if(last_click == null ){
 		last_click = curdate.getTime();
-		return 1;
+		return "One more!";
 	} else {
 		curr_time = curdate.getTime() - last_click;
 		last_click = curdate.getTime();
