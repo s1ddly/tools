@@ -38,6 +38,9 @@
 						<p style="display: inline-block;"><b>Rolling 5 Average:&nbsp;</b><div id="rolling-5" style="display: inline-block;"></div></p>
 						<p style="display: inline-block;"><b>Rolling 7 Average:&nbsp;</b><div id="rolling-7" style="display: inline-block;"></div></p>
 						<p style="display: inline-block;"><b>Total Average:&nbsp;</b><div id="average" style="display: inline-block;"></div></p>
+						<div style="padding-bottom: 30px;">
+							<button type="button" class="btn btn-outline-dark" style="width: 30%; font-weight: 600;" onclick="render_bpm(calc_bpm());">Counter</button>
+						</div>
 						<div id="History">
 							<div class="accordion" id="HistoryAccordian">
 								<div class="accordion-item">
@@ -57,7 +60,7 @@
 					</div>
                     <div class="col-md-6" style="padding-top: 20px">
                         <h1 class="display-5 fw-bolder">BPM Tool</h1>
-						<p>Start tapping a key and the tool will tell you what BPM you are tapping at</p>
+						<p>Start tapping a key or click on the "counter" button and the tool will tell you what BPM you are tapping at</p>
 						<p>This is useful to tap along with a song to figure out its BPM</p>
                     </div>
                 </div>
